@@ -10,9 +10,9 @@ module.exports = function () {
   }, {
     flag: true,
     icon: 'el-icon-fa fa-tags',
-    key: 'task',
+    key: 'Introduction',
     name: "Flex相关概念",
-    path: 'task',
+    path: 'Introduction',
     subMenus: []
   }, {
     flag: true,

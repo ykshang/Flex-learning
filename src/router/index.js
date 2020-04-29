@@ -3,6 +3,7 @@ import Router from 'vue-router';
 
 import Index from "@/views/layout/Index.vue";
 import Overview from "@/views/overview/Overview.vue";
+import Introduction from "@/views/introduction/Introduction.vue";
 
 const routesMap = [
   {
@@ -13,6 +14,11 @@ const routesMap = [
       path: '/',
       name: 'Overview',
       component: Overview,
+      children: []
+    }, {
+      path: '/',
+      name: 'Introduction',
+      component: Introduction,
       children: []
     }]
   }

@@ -56,8 +56,12 @@ export default {
     onSelect (key, keyPath) {
       console.log(key);
       console.log(keyPath);
-      let path = "/" + keyPath.join('/');
-      console.log("当前菜单项的路由为：", path);
+      let fullPath = "/Index/" + keyPath.join('/');
+      console.log(this.$router);
+      this.$router.go({
+        path: fullPath
+      });
+      console.log("当前菜单项的路由为：", fullPath);
     },
     handleOpen (key, keyPath) {
       console.log(key, keyPath);
