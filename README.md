@@ -1,6 +1,6 @@
-# vueDemo
+# Flex-learning
 
-> A Vue.js project
+> A Vue.js project for Flex layout learning
 
 ## Build Setup
 
