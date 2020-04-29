@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div class="breadcrumb">
+  <!-- <div class="breadcrumb">
     <el-breadcrumb separator="/">
     <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
     <el-breadcrumb-item><a href="/">活动管理</a></el-breadcrumb-item>
@@ -9,7 +9,7 @@
     </el-breadcrumb>
   </div>
   <div class="router_view_des">
-  </div>
+  </div> -->
   <div>
     <router-view />
   </div>

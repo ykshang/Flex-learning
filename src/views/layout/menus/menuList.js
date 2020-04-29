@@ -24,14 +24,14 @@ module.exports = function () {
       flag: true,
       icon: 'el-icon-fa fa-home',
       key: 'attendanceTicket',
-      name: this.$t('menu.attendanceTicket'), // 考勤单据
+      name: "demo1",
       path: 'attendanceTicket',
       subMenus: []
     }, {
       flag: true,
       icon: 'el-icon-fa fa-home',
       key: 'attendanceApproval',
-      name: this.$t('menu.attendanceApproval'), // 考勤审批
+      name: "demo2",
       path: 'attendanceApproval',
       subMenus: []
     }]
@@ -39,38 +39,38 @@ module.exports = function () {
     flag: true,
     icon: 'el-icon-fa fa-sitemap',
     key: 'organization',
-    name: "项目部分", // 组织结构
+    name: "项目部分",
     path: 'organization',
     subMenus: [{
       flag: true,
       icon: 'el-icon-fa fa-home',
       key: 'deptment',
-      name: this.$t('menu.deptment'), // 部门管理
+      name: "demo1",
       path: 'deptment'
     }, {
       flag: true,
       icon: 'el-icon-fa fa-home',
       key: 'employee',
-      name: this.$t('menu.employee'), // 员工管理
+      name: "demo2",
       path: 'employee'
     }, {
       flag: true,
       icon: 'el-icon-fa fa-home',
       key: 'position',
-      name: this.$t('menu.position'), // 岗位管理
+      name: "demo3",
       path: 'position'
     }]
   }, {
     flag: true,
     icon: 'el-icon-fa fa-money',
     key: 'finance',
-    name: "其他", // 财务管理
+    name: "其他",
     path: 'finance',
     subMenus: [{
       flag: true,
       icon: 'el-icon-fa fa-money',
       key: 'finance',
-      name: this.$t('menu.finance'), // 薪酬清单
+      name: "min-width",
       path: 'finance',
       subMenus: []
     }]
