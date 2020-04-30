@@ -11,7 +11,7 @@
         <el-container>
           <el-main>
             <transition name="slide-fade" mode="out-in">
-              <router-view :key="key"></router-view>
+              <router-view></router-view>
             </transition>
           </el-main>
           <!-- <el-footer>Footer</el-footer> -->
@@ -32,20 +32,17 @@ export default {
       key: ""
     };
   },
-  watch: {
-  },
   mounted () {
     // console.log(this.$route.name);
   },
   methods: {
     menuChanged (name, path) {
-      this.key = name;
+      console.log(path);
       this.$router.push({
+        name: name,
         path: path
       });
-      console.log(this.$routers);
       console.log(this.$router);
-      console.log(this.$routes);
       console.log(this.$route);
     }
   },

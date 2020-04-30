@@ -19,7 +19,7 @@
               </template>
             </el-menu-item>
         </el-submenu>
-        <el-menu-item :index="menu.key"  :key="menu.key" v-if="menu.flag && (!menu.subMenus || menu.subMenus.length === 0)">
+        <el-menu-item :index="menu.key" :key="menu.key" v-if="menu.flag && (!menu.subMenus || menu.subMenus.length === 0)">
           <i :class="menu.icon"></i>
           <span>{{menu.name}}</span>
         </el-menu-item>
@@ -54,7 +54,7 @@ export default {
       this.isCollapse = !this.isCollapse;
     },
     onSelect (key, keyPath) {
-      let fullPath = "Index/" + keyPath.join('/');
+      let fullPath = "/Index/" + keyPath.join('/');
       console.log("当前菜单项的路由为：", fullPath);
       this.$emit("menuChanged", key, fullPath);
     },

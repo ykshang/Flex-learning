@@ -7,18 +7,18 @@ import Introduction from "@/views/introduction/Introduction.vue";
 
 const routesMap = [
   {
-    path: '/',
     name: 'Index',
+    path: '/',
     component: Index,
     children: [{
-      path: '/',
-      name: 'Introduction',
-      component: Introduction,
+      name: 'Overview',
+      path: 'Overview',
+      component: Overview,
       children: []
     }, {
-      path: '/',
-      name: 'Overview',
-      component: Overview,
+      name: 'Introduction',
+      path: 'Introduction',
+      component: Introduction,
       children: []
     }]
   }

@@ -10,12 +10,14 @@
   <br/>
   <br/>
   <div v-if="isDiv ==='div'" :class="'container' + flexFlag">
-    <div class="item">弹性元素1</div>
+    <div class="item">弹性元素12</div>
     <div class="item">弹性元素2</div>
     <div class="item">弹性元素3</div>
   </div>
   <div v-if="isDiv === 'span'" :class="'container' + flexFlag">
-    <span class="item">弹性元素1</span><span class="item">弹性元素2</span><span class="item">弹性元素3</span>
+    <span class="item">弹性元素1221111111111sdadsdasdadadadadasdadas111111111 1111111111111111111</span>
+    <span class="item">弹性元FSFSFSFSFSFSFSFDADADASDASDADADDSDADADSFSFSF素2</span>
+    <span class="item">弹性元素3</span>
   </div>
   <h2>对应样式</h2>
   <!--css 样式-->
