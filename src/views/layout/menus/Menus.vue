@@ -54,14 +54,9 @@ export default {
       this.isCollapse = !this.isCollapse;
     },
     onSelect (key, keyPath) {
-      console.log(key);
-      console.log(keyPath);
-      let fullPath = "/Index/" + keyPath.join('/');
-      console.log(this.$router);
-      this.$router.go({
-        path: fullPath
-      });
+      let fullPath = "Index/" + keyPath.join('/');
       console.log("当前菜单项的路由为：", fullPath);
+      this.$emit("menuChanged", key, fullPath);
     },
     handleOpen (key, keyPath) {
       console.log(key, keyPath);

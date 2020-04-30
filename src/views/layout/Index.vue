@@ -6,13 +6,15 @@
       </el-header>
       <el-container style="position: absolute; top: 60px; width: 100%; height: auto; bottom: 0px; left: 0px">
         <el-aside width="auto" style="border: 1px solid #e6e6e6">
-          <menus></menus>
+          <menus @menuChanged="menuChanged"></menus>
         </el-aside>
         <el-container>
           <el-main>
-            <Main></Main>
+            <transition name="slide-fade" mode="out-in">
+              <router-view :key="key"></router-view>
+            </transition>
           </el-main>
-          <el-footer>Footer</el-footer>
+          <!-- <el-footer>Footer</el-footer> -->
         </el-container>
       </el-container>
     </el-container>
@@ -22,19 +24,34 @@
 <script>
 import Menus from './menus/Menus';
 import Header from './headers/Header';
-import Main from './main/Main';
 export default {
   name: 'Index',
   data () {
     return {
+      path: "",
+      key: ""
     };
   },
+  watch: {
+  },
+  mounted () {
+    // console.log(this.$route.name);
+  },
   methods: {
+    menuChanged (name, path) {
+      this.key = name;
+      this.$router.push({
+        path: path
+      });
+      console.log(this.$routers);
+      console.log(this.$router);
+      console.log(this.$routes);
+      console.log(this.$route);
+    }
   },
   components: {
     Menus,
-    Header,
-    Main
+    Header
   }
 };
 </script>

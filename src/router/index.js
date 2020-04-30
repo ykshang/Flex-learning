@@ -12,13 +12,13 @@ const routesMap = [
     component: Index,
     children: [{
       path: '/',
-      name: 'Overview',
-      component: Overview,
+      name: 'Introduction',
+      component: Introduction,
       children: []
     }, {
       path: '/',
-      name: 'Introduction',
-      component: Introduction,
+      name: 'Overview',
+      component: Overview,
       children: []
     }]
   }

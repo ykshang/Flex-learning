@@ -1,6 +1,6 @@
 <template>
   <div id="app" style="height:100%,width:100%">
-    <router-view />
+    <router-view :key="'Index'" />
   </div>
 </template>
 
