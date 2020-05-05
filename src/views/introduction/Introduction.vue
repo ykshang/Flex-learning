@@ -1,123 +1,40 @@
 <template>
 <div style="margin:20px; width:1200px">
   <h2>主要名词概念</h2>
-  <div>
-    <b>CSS 弹性盒子布局</b>是 CSS 的模块之一，定义了一种针对用户界面设计而优化的 CSS 盒子模型。在弹性布局模型中，弹性容器的子元素可以在任何方向上排布，也可以“弹性伸缩”其尺寸，既可以增加尺寸以填满未使用的空间，也可以收缩尺寸以避免父元素溢出。子元素的水平对齐和垂直对齐都能很方便的进行操控。通过嵌套这些框（水平框在垂直框内，或垂直框在水平框内）可以在两个维度上构建布局。
-  </div>
-  <h2>例子</h2>
-  <el-button type="primary" @click="changeFlexFlag">{{"切换弹性元素"}}</el-button>
-  <el-button type="primary" @click="changeDiv">{{"当前为: " + isDiv + ""}}</el-button>
-  <br/>
-  <br/>
-  <div v-if="isDiv ==='div'" :class="'container' + flexFlag">
-    <div class="item">弹性元素12</div>
-    <div class="item">弹性元素2</div>
-    <div class="item">弹性元素3</div>
-  </div>
-  <div v-if="isDiv === 'span'" :class="'container' + flexFlag">
-    <span class="item">弹性元素1221111111111sdadsdasdadadadadasdadas111111111 1111111111111111111</span>
-    <span class="item">弹性元FSFSFSFSFSFSFSFDADADASDASDADADDSDADADSFSFSF素2</span>
-    <span class="item">弹性元素3</span>
-  </div>
-  <h2>对应样式</h2>
-  <!--css 样式-->
-  <div class="css-container">
-    <span v-for="item in cssContent" :key="item.name" class="css-item">
-      <h1>{{item.name}}</h1>
-      <div v-html="item.cssContent"></div>
-    </span>
-  </div>
+  <h1>示意图:</h1>
+  <!-- 响应式图片 -->
+  <img :src="imgPath" width="2000" height="1000">
+  <h1>主轴(Main Axis)</h1>
+  <p>flex-direction 可以设置主轴以及元素排列方向</p>
+  <vue-markdown v-highlight>{{msg}}</vue-markdown>
 </div>
 </template>
 
 <script>
+// 导入组件 及 组件样式
+import imgPath from "@/assets/img/demo.png";
+import VueMarkdown from 'vue-markdown';
+
 export default {
   name: 'Introduction',
   data () {
     return {
-      flexFlag: "",
-      isDiv: "div",
-      cssContent: [],
-      isCollapse: true
+      imgPath,
+      msg: "```css\n flex-direction: row ||  row-reverse || column || column-reverse; \n```"
     };
   },
   mounted () {
-    this.cssContent = [{
-      name: "容器",
-      cssContent: ".container {<br/>&nbsp&nbspwidth: 1200px;<br/>&nbsp&nbspheight: 400px;<br/>&nbsp&nbspbackground: yellow;<br/>}"
-    }, {
-      name: "弹性元素1",
-      cssContent: ".item {<br/>&nbsp&nbspborder: dashed 1px;<br/>&nbsp&nbspflex: 1;<br/>}"
-    }, {
-      name: "弹性元素2",
-      cssContent: ".item {<br/>&nbsp&nbspborder: dashed 1px;<br/>&nbsp&nbspflex: 1;<br/>}"
-    }, {
-      name: "弹性元素3",
-      cssContent: ".item {<br/>&nbsp&nbspborder: dashed 1px;<br/>&nbsp&nbspflex: 1;<br/>}"
-    }];
   },
   methods: {
-    changeDiv () {
-      if (this.isDiv === "div") {
-        this.isDiv = "span";
-      } else {
-        this.isDiv = "div";
-      }
-    },
-    changeFlexFlag () {
-      if (!this.flexFlag) {
-        this.flexFlag = " flex";
-        this.cssContent = [{
-          "name": "容器",
-          "cssContent": ".container {<br/>&nbsp&nbspwidth: 1200px;<br/>&nbsp&nbspheight: 400px;<br/>&nbsp&nbspbackground: yellow;<br/>}<br/><br/>.flex{<br/>&nbsp&nbspdisplay: flex;<br/>}"
-        }, {
-          "name": "弹性元素1",
-          "cssContent": ".item {<br/>&nbsp&nbspborder: dashed 1px;<br/>&nbsp&nbspflex: 1;<br/>}"
-        }, {
-          "name": "弹性元素2",
-          "cssContent": ".item {<br/>&nbsp&nbspborder: dashed 1px;<br/>&nbsp&nbspflex: 1;<br/>}"
-        }, {
-          name: "弹性元素3",
-          cssContent: ".item {<br/>&nbsp&nbspborder: dashed 1px;<br/>&nbsp&nbspflex: 1;<br/>}"
-        }];
-      } else {
-        this.flexFlag = "";
-        this.cssContent = [{
-          name: "容器",
-          cssContent: ".container {<br/>&nbsp&nbspwidth: 1200px;<br/>&nbsp&nbspheight: 400px;<br/>&nbsp&nbspbackground: yellow;<br/>}"
-        }, {
-          name: "弹性元素1",
-          cssContent: ".item {<br/>&nbsp&nbspborder: dashed 1px;<br/>&nbsp&nbspflex: 1;<br/>}"
-        }, {
-          name: "弹性元素2",
-          cssContent: ".item {<br/>&nbsp&nbspborder: dashed 1px;<br/>&nbsp&nbspflex: 1;<br/>}"
-        }, {
-          name: "弹性元素3",
-          cssContent: ".item {<br/>&nbsp&nbspborder: dashed 1px;<br/>&nbsp&nbspflex: 1;<br/>}"
-        }];
-      }
-    }
+  },
+  components: {
+    VueMarkdown
   }
 };
 </script>
 <style scoped>
-.container {
-  width: 100%;
-  height: 300px;
-  background: yellow;
-}
-.flex {
-  display: flex;
-}
-.item {
-  border: dashed 1px;
-  flex: 1;
-}
-.css-container {
-  display: flex;
-}
-.css-item {
-  display: inline-block;
-  flex: 1;
+img {
+    max-width: 70%;
+    height: auto;
 }
 </style>

@@ -42,8 +42,6 @@ export default {
         name: name,
         path: path
       });
-      console.log(this.$router);
-      console.log(this.$route);
     }
   },
   components: {

@@ -19,21 +19,24 @@
   </div>
   <h2>对应样式</h2>
   <!--css 样式-->
-  <div class="css-container">
+  <div class="css-container"  v-if="flag">
     <span v-for="item in cssContent" :key="item.name" class="css-item">
       <h1>{{item.name}}</h1>
-      <div v-html="item.cssContent"></div>
+      <vue-markdown v-highlight>{{item.cssContent}}</vue-markdown>
     </span>
   </div>
 </div>
 </template>
 
 <script>
+import VueMarkdown from 'vue-markdown';
+
 export default {
   name: 'Overview',
   data () {
     return {
       flexFlag: "",
+      flag: true,
       isDiv: "div",
       cssContent: [],
       isCollapse: true
@@ -42,16 +45,17 @@ export default {
   mounted () {
     this.cssContent = [{
       name: "容器",
-      cssContent: ".container {<br/>&nbsp&nbspwidth: 1200px;<br/>&nbsp&nbspheight: 400px;<br/>&nbsp&nbspbackground: yellow;<br/>}"
+      // cssContent: "```css \n.container {\n  width: 1200px;\n  height: 400px;\n  background: yellow;\n}\n```"
+      cssContent: "```css \n.container {\n  width: 1200px;\n  height: 400px;\n  background: yellow;\n}\n.flex {\ndisplay: flex;\n}\n ```"
     }, {
       name: "弹性元素1",
-      cssContent: ".item {<br/>&nbsp&nbspborder: dashed 1px;<br/>&nbsp&nbspflex: 1;<br/>}"
+      cssContent: "```css \n.item {\n  border: dashed 1px;\n  flex: 1;\n}\n ```"
     }, {
       name: "弹性元素2",
-      cssContent: ".item {<br/>&nbsp&nbspborder: dashed 1px;<br/>&nbsp&nbspflex: 1;<br/>}"
+      cssContent: "```css \n.item {\n  border: dashed 1px;\n  flex: 1;\n}\n ```"
     }, {
       name: "弹性元素3",
-      cssContent: ".item {<br/>&nbsp&nbspborder: dashed 1px;<br/>&nbsp&nbspflex: 1;<br/>}"
+      cssContent: "```css \n.item {\n  border: dashed 1px;\n  flex: 1;\n}\n ```"
     }];
   },
   methods: {
@@ -63,38 +67,44 @@ export default {
       }
     },
     changeFlexFlag () {
+      this.flag = false;
       if (!this.flexFlag) {
         this.flexFlag = " flex";
         this.cssContent = [{
-          "name": "容器",
-          "cssContent": ".container {<br/>&nbsp&nbspwidth: 1200px;<br/>&nbsp&nbspheight: 400px;<br/>&nbsp&nbspbackground: yellow;<br/>}<br/><br/>.flex{<br/>&nbsp&nbspdisplay: flex;<br/>}"
+          name: "容器",
+          cssContent: "```css \n.container {\n  width: 1200px;\n  height: 400px;\n  background: yellow;\n}\n.flex {\ndisplay: flex;\n}\n ```"
         }, {
-          "name": "弹性元素1",
-          "cssContent": ".item {<br/>&nbsp&nbspborder: dashed 1px;<br/>&nbsp&nbspflex: 1;<br/>}"
+          name: "弹性元素1",
+          cssContent: "```css \n.item {\n  border: dashed 1px;\n  flex: 1;\n}\n ```"
         }, {
-          "name": "弹性元素2",
-          "cssContent": ".item {<br/>&nbsp&nbspborder: dashed 1px;<br/>&nbsp&nbspflex: 1;<br/>}"
+          name: "弹性元素2",
+          cssContent: "```css \n.item {\n  border: dashed 1px;\n  flex: 1;\n}\n ```"
         }, {
           name: "弹性元素3",
-          cssContent: ".item {<br/>&nbsp&nbspborder: dashed 1px;<br/>&nbsp&nbspflex: 1;<br/>}"
+          cssContent: "```css \n.item {\n  border: dashed 1px;\n  flex: 1;\n}\n ```"
         }];
       } else {
         this.flexFlag = "";
         this.cssContent = [{
           name: "容器",
-          cssContent: ".container {<br/>&nbsp&nbspwidth: 1200px;<br/>&nbsp&nbspheight: 400px;<br/>&nbsp&nbspbackground: yellow;<br/>}"
+          cssContent: "```css \n.container {\n  width: 1200px;\n  height: 400px;\n  background: yellow;\n}\n```"
         }, {
           name: "弹性元素1",
-          cssContent: ".item {<br/>&nbsp&nbspborder: dashed 1px;<br/>&nbsp&nbspflex: 1;<br/>}"
+          cssContent: "```css \n.item\n  border: dashed 1px;\n  flex: 1;\n}\n ```"
         }, {
           name: "弹性元素2",
-          cssContent: ".item {<br/>&nbsp&nbspborder: dashed 1px;<br/>&nbsp&nbspflex: 1;<br/>}"
+          cssContent: "```css \n.item\n  border: dashed 1px;\n  flex: 1;\n}\n ```"
         }, {
           name: "弹性元素3",
-          cssContent: ".item {<br/>&nbsp&nbspborder: dashed 1px;<br/>&nbsp&nbspflex: 1;<br/>}"
+          cssContent: "```css \n.item\n  border: dashed 1px;\n  flex: 1;\n}\n ```"
         }];
       }
+      this.flag = true;
+      console.log(this.cssContent);
     }
+  },
+  components: {
+    VueMarkdown
   }
 };
 </script>
@@ -117,5 +127,6 @@ export default {
 .css-item {
   display: inline-block;
   flex: 1;
+  margin: 5px;
 }
 </style>

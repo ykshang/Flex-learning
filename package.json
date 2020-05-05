@@ -16,8 +16,10 @@
   "dependencies": {
     "element-ui": "^2.10.1",
     "font-awesome": "^4.7.0",
+    "text-loader": "0.0.1",
     "vue": "^2.5.2",
     "vue-i18n": "^8.15.4",
+    "vue-markdown": "^2.2.4",
     "vue-router": "^3.0.1",
     "vuex": "^3.1.2"
   },
