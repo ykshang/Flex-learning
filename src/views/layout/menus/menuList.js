@@ -17,24 +17,10 @@ module.exports = function () {
   }, {
     flag: true,
     icon: 'el-icon-fa fa-folder-o',
-    key: 'vacation',
+    key: 'Container',
     name: "容器部分",
-    path: 'vacation',
-    subMenus: [{
-      flag: true,
-      icon: 'el-icon-fa fa-home',
-      key: 'attendanceTicket',
-      name: "demo1",
-      path: 'attendanceTicket',
-      subMenus: []
-    }, {
-      flag: true,
-      icon: 'el-icon-fa fa-home',
-      key: 'attendanceApproval',
-      name: "demo2",
-      path: 'attendanceApproval',
-      subMenus: []
-    }]
+    path: 'Container',
+    subMenus: []
   }, {
     flag: true,
     icon: 'el-icon-fa fa-sitemap',
