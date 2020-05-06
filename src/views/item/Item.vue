@@ -49,7 +49,7 @@ export default {
       alignSelf,
       msg1: "```css\n order: 1; \n```",
       msg2: "```css\n  flex-grow: 1; /* default 0 */ \n```",
-      msg3: "```css\n flex-shrink: 1; /* default 1 */ \n```",
+      msg3: "```css\n flex-shrink: 1; /* default 1 */ \n```"
     };
   },
   mounted () {
