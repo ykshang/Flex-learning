@@ -15,28 +15,15 @@
 </template>
 
 <script>
-// 导入组件 及 组件样式
-import VueMarkdown from 'vue-markdown';
-
 export default {
   name: 'Init',
   data () {
     return {
-      msg: "```css\n flex-direction: row ||  row-reverse || column || column-reverse; \n```"
     };
   },
   mounted () {
   },
   methods: {
-  },
-  components: {
-    VueMarkdown
   }
 };
 </script>
-<style scoped>
-img {
-    max-width: 70%;
-    height: auto;
-}
-</style>
