@@ -63,15 +63,15 @@ module.exports = function () {
   }, {
     flag: true,
     icon: 'el-icon-fa fa-money',
-    key: 'finance',
+    key: 'Other',
     name: "其他",
-    path: 'finance',
+    path: 'Other',
     subMenus: [{
       flag: true,
       icon: 'el-icon-fa fa-money',
-      key: 'finance',
-      name: "min-width",
-      path: 'finance',
+      key: 'Init',
+      name: "初始化",
+      path: 'Init',
       subMenus: []
     }]
   }];
