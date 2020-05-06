@@ -7,6 +7,7 @@ import Introduction from "@/views/introduction/Introduction.vue";
 import Init from "@/views/other/Init.vue";
 import Other from "@/views/other/Other.vue";
 import Container from "@/views/container/Container.vue";
+import Item from "@/views/item/Item.vue";
 
 const routesMap = [
   {
@@ -27,6 +28,11 @@ const routesMap = [
       name: 'Container',
       path: 'Container',
       component: Container,
+      children: []
+    }, {
+      name: 'Item',
+      path: 'Item',
+      component: Item,
       children: []
     }, {
       name: 'Other',

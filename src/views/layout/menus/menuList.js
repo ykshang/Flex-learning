@@ -24,28 +24,10 @@ module.exports = function () {
   }, {
     flag: true,
     icon: 'el-icon-fa fa-sitemap',
-    key: 'organization',
+    key: 'Item',
     name: "项目部分",
-    path: 'organization',
-    subMenus: [{
-      flag: true,
-      icon: 'el-icon-fa fa-home',
-      key: 'deptment',
-      name: "demo1",
-      path: 'deptment'
-    }, {
-      flag: true,
-      icon: 'el-icon-fa fa-home',
-      key: 'employee',
-      name: "demo2",
-      path: 'employee'
-    }, {
-      flag: true,
-      icon: 'el-icon-fa fa-home',
-      key: 'position',
-      name: "demo3",
-      path: 'position'
-    }]
+    path: 'Item',
+    subMenus: []
   }, {
     flag: true,
     icon: 'el-icon-fa fa-bars',
