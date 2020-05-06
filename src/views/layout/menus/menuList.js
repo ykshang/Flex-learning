@@ -16,7 +16,7 @@ module.exports = function () {
     subMenus: []
   }, {
     flag: true,
-    icon: 'el-icon-fa fa-calendar',
+    icon: 'el-icon-fa fa-folder-o',
     key: 'vacation',
     name: "容器部分",
     path: 'vacation',
@@ -62,13 +62,13 @@ module.exports = function () {
     }]
   }, {
     flag: true,
-    icon: 'el-icon-fa fa-money',
+    icon: 'el-icon-fa fa-bars',
     key: 'Other',
     name: "其他",
     path: 'Other',
     subMenus: [{
       flag: true,
-      icon: 'el-icon-fa fa-money',
+      icon: 'el-icon-fa fa-spinner fa-spin',
       key: 'Init',
       name: "初始化",
       path: 'Init',
