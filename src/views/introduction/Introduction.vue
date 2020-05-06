@@ -5,14 +5,23 @@
   <!-- 响应式图片 -->
   <img :src="imgPath" width="2000" height="1000">
   <h1>主轴(Main Axis)</h1>
-  <p>flex-direction 可以设置主轴以及元素排列方向</p>
+  <p>flex-direction 可以设置主轴以及元素排列方向，它有以下四个取值：</p>
   <vue-markdown v-highlight>{{msg}}</vue-markdown>
+  <p>示意图:</p>
+  <img :src="flexDirection" width="2000" height="1000">
+  <h1>交叉轴(Cross Axis)</h1>
+  <p>垂直于主轴的轴线是交叉轴。</p>
+  <h1>起始线和终止线</h1>
+  <p>主轴的开始位置（与边框的交叉点）叫做<b>main start</b>，结束位置叫做<b>main end</b>；交叉轴的开始位置叫做<b>cross start</b>，结束位置叫做<b>cross end</b>。如果是阿拉伯语，他的书写方式是按照从右向左的方式来写的，这时候起始线和终止线会交换，通过head标签设置浏览器的语言来通知浏览器。浏览器会自动切换的。</p>
+  <h1>容器和项目</h1>
+  <p>采用 Flex 布局的元素，称为 Flex 容器（<b>flex container</b>），简称"容器"。它的所有子元素自动成为容器成员，称为 Flex 项目（<b>flex item</b>），简称"项目"或者“元素”。设置了flex属性后，会让项目的float，clear，vertical-align属性失效，不会导致脱离文档流。</p>
 </div>
 </template>
 
 <script>
 // 导入组件 及 组件样式
 import imgPath from "@/assets/img/demo.png";
+import flexDirection from "@/assets/img/flex-direction.png";
 import VueMarkdown from 'vue-markdown';
 
 export default {
@@ -20,6 +29,7 @@ export default {
   data () {
     return {
       imgPath,
+      flexDirection,
       msg: "```css\n flex-direction: row ||  row-reverse || column || column-reverse; \n```"
     };
   },
