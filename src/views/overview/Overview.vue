@@ -1,5 +1,5 @@
 <template>
-<div style="margin:20px; width:1200px">
+<div class="layout">
   <h2>简介</h2>
   <div>
     <b>CSS 弹性盒子布局</b>是 CSS 的模块之一，定义了一种针对用户界面设计而优化的 CSS 盒子模型。在弹性布局模型中，弹性容器的子元素可以在任何方向上排布，也可以“弹性伸缩”其尺寸，既可以增加尺寸以填满未使用的空间，也可以收缩尺寸以避免父元素溢出。子元素的水平对齐和垂直对齐都能很方便的进行操控。通过嵌套这些框（水平框在垂直框内，或垂直框在水平框内）可以在两个维度上构建布局。
@@ -31,6 +31,7 @@
       <vue-markdown v-highlight>{{item.cssContent}}</vue-markdown>
     </span>
   </div>
+  <div style="height:400px"></div>
 </div>
 </template>
 
@@ -122,5 +123,13 @@ export default {
   display: inline-block;
   flex: 1;
   margin: 5px;
+}
+.layout {
+  margin:20px;
+  width:1200px;
+}
+.layout >>> pre code {
+  font-size: 17px;
+  font-weight: 600;
 }
 </style>
