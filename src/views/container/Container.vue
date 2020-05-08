@@ -37,7 +37,16 @@
     <li>center： 居中</li>
     <li>space-between：两端对齐，项目之间的间隔都相等。</li>
     <li>space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。</li>
+    <li>space-evenly：在主轴上平均分配（不是所有的浏览器都支持）</li>
   </ul>
+  <h1>space-evenly</h1>
+  <div class="container">
+    <div class="item" >1111111111</div>
+    <div class="item">1111111111</div>
+    <div class="item">11111111111111111111</div>
+    <div class="item">1111111111</div>
+    <div class="item">11111111111111111111</div>
+  </div>
   <img :src="justifyContent" width="2000" height="1000">
   <h2>align-items属性定义项目在交叉轴上如何对齐。</h2>
   <h1>可选值：</h1>
@@ -64,7 +73,7 @@
     <li>space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。</li>
     <li>stretch（默认值）：轴线占满整个交叉轴。</li>
   </ul>
-    <img :src="alignContent" width="2000" height="1000">
+  <img :src="alignContent" width="2000" height="1000">
   <div style="height:400px"></div>
 </div>
 </template>
@@ -110,6 +119,16 @@ export default {
 };
 </script>
 <style scoped>
+.item {
+  border: 1px dashed;
+}
+.container {
+  display: flex;
+  border: 1px dashed red;
+  background: yellow;
+  width: 100%;
+  justify-content: space-evenly;
+}
 img {
   max-width: 70%;
   height: auto;

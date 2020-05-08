@@ -55,6 +55,13 @@ module.exports = function () {
       name: "css属性direction",
       path: 'Direction',
       subMenus: []
+    }, {
+      flag: true,
+      icon: 'el-icon-fa fa-spinner fa-spin',
+      key: 'Margin',
+      name: "css属性Margin",
+      path: 'Margin',
+      subMenus: []
     }]
   }];
 };

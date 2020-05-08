@@ -7,6 +7,7 @@ import Introduction from "@/views/introduction/Introduction.vue";
 import Init from "@/views/other/Init.vue";
 import Other from "@/views/other/Other.vue";
 import Direction from "@/views/other/Direction.vue";
+import Margin from "@/views/other/Margin.vue";
 import Content from "@/views/other/Content.vue";
 import Container from "@/views/container/Container.vue";
 import Item from "@/views/item/Item.vue";
@@ -52,6 +53,10 @@ const routesMap = [
         name: 'Direction',
         path: 'Direction',
         component: Direction
+      }, {
+        name: 'Margin',
+        path: 'Margin',
+        component: Margin
       }]
     }]
   }
