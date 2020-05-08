@@ -6,6 +6,7 @@ import Overview from "@/views/overview/Overview.vue";
 import Introduction from "@/views/introduction/Introduction.vue";
 import Init from "@/views/other/Init.vue";
 import Other from "@/views/other/Other.vue";
+import Content from "@/views/other/Content.vue";
 import Container from "@/views/container/Container.vue";
 import Item from "@/views/item/Item.vue";
 
@@ -42,6 +43,10 @@ const routesMap = [
         name: 'Init',
         path: 'Init',
         component: Init
+      }, {
+        name: 'Content',
+        path: 'Content',
+        component: Content
       }]
     }]
   }
