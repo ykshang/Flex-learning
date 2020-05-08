@@ -45,8 +45,15 @@ module.exports = function () {
       flag: true,
       icon: 'el-icon-fa fa-spinner fa-spin',
       key: 'Content',
-      name: "min-content",
+      name: "css属性min-content",
       path: 'Content',
+      subMenus: []
+    }, {
+      flag: true,
+      icon: 'el-icon-fa fa-spinner fa-spin',
+      key: 'Direction',
+      name: "css属性direction",
+      path: 'Direction',
       subMenus: []
     }]
   }];
