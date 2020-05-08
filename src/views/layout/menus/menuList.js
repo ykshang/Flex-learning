@@ -41,6 +41,13 @@ module.exports = function () {
       name: "初始化",
       path: 'Init',
       subMenus: []
+    }, {
+      flag: true,
+      icon: 'el-icon-fa fa-spinner fa-spin',
+      key: 'Content',
+      name: "min-content",
+      path: 'Content',
+      subMenus: []
     }]
   }];
 };
