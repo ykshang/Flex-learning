@@ -98,6 +98,7 @@ img {
 .layout >>> pre code {
   font-size: 17px;
   font-weight: 600;
+  font-family: auto;
 }
 .flex {
   display: flex;

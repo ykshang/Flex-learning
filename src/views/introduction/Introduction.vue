@@ -15,6 +15,11 @@
   <p>主轴的开始位置（与边框的交叉点）叫做<b>main start</b>，结束位置叫做<b>main end</b>；交叉轴的开始位置叫做<b>cross start</b>，结束位置叫做<b>cross end</b>。如果是阿拉伯语，他的书写方式是按照从右向左的方式来写的，这时候起始线和终止线会交换，通过head标签设置浏览器的语言来通知浏览器。浏览器会自动切换的。</p>
   <h1>容器和项目</h1>
   <p>采用 Flex 布局的元素，称为 Flex 容器（<b>flex container</b>），简称"容器"。它的所有子元素自动成为容器成员，称为 Flex 项目（<b>flex item</b>），简称"项目"或者“元素”。设置了flex属性后，会让项目的float，clear，vertical-align属性失效，不会导致脱离文档流。</p>
+  <h1>flex和inline-flex的区别</h1>
+  <ul>
+    <li>flex相当于是块级元素，相当于div 独占一行</li>
+    <li>inline-flex相当于内联元素，相当于span，一行有很多个弹性盒子容器。</li>
+  </ul>
   <div style="height:400px"></div>
 </div>
 </template>
@@ -55,5 +60,6 @@ img {
 .layout >>> pre code {
   font-size: 17px;
   font-weight: 600;
+  font-family: auto;
 }
 </style>

@@ -17,7 +17,7 @@
   <vue-markdown v-highlight>{{msg2}}</vue-markdown>
   <p>默认情况下，项目都排在一条线（又称"轴线"）上，起点则在起始线一端。flex-wrap属性定义，如果一条轴线排不下，如何换行。它可能有三个取值：</p>
   <ul>
-    <li>nowrap（默认）：不换行。会修改元素的初始值，如果超宽，溢出</li>
+    <li>nowrap（默认）：不换行，如果超宽，溢出</li>
     <br/>
     <img :src="nowrap" width="2000" height="1000">
     <br/>
@@ -248,5 +248,6 @@ img {
 .layout >>> pre code {
   font-size: 17px;
   font-weight: 600;
+  font-family: auto;
 }
 </style>
