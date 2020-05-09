@@ -8,6 +8,14 @@
     <div class="item">1111111111</div>
     <div class="item">11111111111111111111</div>
   </div>
+  <h1>在第一、二、三个元素上加margin: auto</h1>
+  <div class="container">
+    <div class="item" style="margin:auto">1111111111</div>
+    <div class="item" style="margin:auto">1111111111</div>
+    <div class="item" style="margin:auto">11111111111111111111</div>
+    <div class="item">1111111111</div>
+    <div class="item">11111111111111111111</div>
+  </div>
   <h1>在第一个和第三个元素上加margin-left: auto</h1>
   <div class="container">
     <div class="item" style="margin-left:auto">1111111111</div>
