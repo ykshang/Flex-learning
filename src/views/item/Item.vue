@@ -60,7 +60,7 @@
   </ul>
   <h2>align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。</h2>
   <vue-markdown v-highlight>{{msg5}}</vue-markdown>
-  <div class="container" style="height: 200px; align-slef: flex-start">
+  <div class="container" style="height: 200px; align-items: flex-start">
     <div class="item" style="height: 40px">11111</div>
     <div class="item" style="height: 50px">11111</div>
     <div class="item" style="height: 110px">11111</div>
@@ -92,7 +92,7 @@ export default {
       msg2: '```html\n<div class="container" style="height: 50px">\n  <div>11111</div>\n  <div style="flex-grow: 0">11111</div>\n  <div style="flex-grow: 1">11111</div>\n  <div style="flex-grow: 2">11111</div>\n  <div style="flex-grow: 3">11111</div>\n</div>\n```',
       msg3: '```html\n<div class="container" style="height: 50px">\n  <div style="flex-shrink: 0; width: 300px">11111</div>\n  <div style="width: 300px">11111</div>\n  <div style="flex-shrink: 1; width: 300px">11111</div>\n  <div style="flex-shrink: 2; width: 300px">11111</div>\n  <div style="flex-shrink: 3; width: 300px">11111</div>\n</div>\n```',
       msg4: '```html\n<div class="container" style="height: 50px">\n  <div>11111</div>\n  <div style="flex-basis: auto">11111</div>\n  <div style="flex-basis: 100px">11111</div>\n  <div style="flex-basis: 200px">11111</div>\n  <div style="flex-basis: 300px">11111</div>\n</div>\n```',
-      msg5: '```html\n<div class="container" style="height: 200px; align-slef: flex-start">\n  <div class="item" style="height: 40px">11111</div>\n  <div class="item" style="height: 50px">11111</div>\n  <div class="item" style="height: 110px">11111</div>\n  <div class="item" style="height: 80px; align-self:flex-end">11111</div>\n  <div class="item" style="height: 30px">11111</div>\n  <div class="item" style="height: 170px">11111</div>\n</div>\n```'
+      msg5: '```html\n<div class="container" style="height: 200px; align-items: flex-start">\n  <div class="item" style="height: 40px">11111</div>\n  <div class="item" style="height: 50px">11111</div>\n  <div class="item" style="height: 110px">11111</div>\n  <div class="item" style="height: 80px; align-self:flex-end">11111</div>\n  <div class="item" style="height: 30px">11111</div>\n  <div class="item" style="height: 170px">11111</div>\n</div>\n```'
     };
   },
   mounted () {
@@ -115,6 +115,7 @@ img {
   font-size: 20px;
   justify-content: center;
   align-items: center;
+  background: cyan;
 }
 .container {
   display: flex;

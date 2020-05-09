@@ -40,8 +40,8 @@ export default {
       css: "",
       css1: "",
       options: [
-        {label: "rtl", value: "rtl"},
-        {label: "ltr", value: "ltr"}
+        {label: "ltr", value: "ltr"},
+        {label: "rtl", value: "rtl"}
       ],
       options1: [
         {label: "row", value: "row"},
@@ -115,5 +115,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: cyan;
 }
 </style>

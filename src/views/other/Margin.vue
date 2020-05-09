@@ -43,6 +43,8 @@ export default {
 <style scoped>
 .item {
   border: 1px dashed;
+  background: cyan;
+  height: 50px;
 }
 .container {
   display: flex;

@@ -125,18 +125,21 @@ export default {
   height: 100px;
   background: yellow;
   margin: 30px;
+  border: dashed 1px;
 }
 .div2 {
   width: min-content;
   height: 100px;
   background: yellow;
   margin: 30px;
+  border: dashed 1px;
 }
 .div3 {
   width: max-content;
   height: 100px;
   background: yellow;
   margin: 20px;
+  border: dashed 1px;
 }
 .flex {
   display: flex;

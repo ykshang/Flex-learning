@@ -39,16 +39,68 @@
     <li>space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。</li>
     <li>space-evenly：在主轴上平均分配</li>
   </ul>
-  <h1>space-evenly</h1>
-  <div class="container">
-    <div class="item" >1111111111</div>
-    <div class="item">1111111111</div>
-    <div class="item">11111111111111111111</div>
-    <div class="item">1111111111</div>
-    <div class="item">11111111111111111111</div>
+  <div style="display: flex; flex-wrap: wrap;">
+    <div style="margin: 0 10px">
+      <h1>flex-start</h1>
+      <div class="container" style="height:50px; justify-content: flex-start;">
+        <div class="item" >111111</div>
+        <div class="item">1111111</div>
+        <div class="item">1111111111</div>
+        <div class="item">111111</div>
+        <div class="item">1111111</div>
+      </div>
+    </div>
+    <div style="margin: 0 10px">
+      <h1>flex-end</h1>
+      <div class="container" style="height:50px; justify-content: flex-end;">
+        <div class="item" >1111111111</div>
+        <div class="item">1111111111</div>
+        <div class="item">111111</div>
+        <div class="item">1111111111</div>
+        <div class="item">1111111</div>
+      </div>
+    </div>
+    <div style="margin: 0 10px">
+      <h1>center</h1>
+      <div class="container" style="height:50px; justify-content: center;">
+        <div class="item" >1111111111</div>
+        <div class="item">1111111111</div>
+        <div class="item">1111111111</div>
+        <div class="item">1111111111</div>
+        <div class="item">1111111</div>
+      </div>
+    </div>
+    <div style="margin: 0 10px">
+      <h1>space-between</h1>
+      <div class="container" style="height:50px; justify-content: space-between;">
+        <div class="item" >1111111</div>
+        <div class="item">1111111111</div>
+        <div class="item">1111</div>
+        <div class="item">1111111111</div>
+        <div class="item">111</div>
+      </div>
+    </div>
+    <div style="margin: 0 10px">
+      <h1>space-around</h1>
+      <div class="container" style="height:50px; justify-content: space-around;">
+        <div class="item" >1111</div>
+        <div class="item">11111</div>
+        <div class="item">11111</div>
+        <div class="item">1111</div>
+        <div class="item">111111</div>
+      </div>
+    </div>
+    <div style="margin: 0 10px">
+      <h1>space-evenly</h1>
+      <div class="container" style="height:50px; justify-content: space-evenly;">
+        <div class="item" >11111111</div>
+        <div class="item">11111111</div>
+        <div class="item">111</div>
+        <div class="item">11111</div>
+        <div class="item">1111</div>
+      </div>
+    </div>
   </div>
-  <img :src="justifyContent" width="2000" height="1000">
-  <h2>align-items属性定义项目在交叉轴上如何对齐。</h2>
   <h1>可选值：</h1>
   <vue-markdown v-highlight>{{msg4}}</vue-markdown>
   <ul>
@@ -58,7 +110,63 @@
     <li>baseline: 项目的第一行文字的基线对齐。</li>
     <li>stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。</li>
   </ul>
-  <img :src="alignItems" width="2000" height="1000">
+  <div style="display: flex; flex-wrap: wrap;">
+    <div style="margin: 0 10px">
+      <h1>flex-start</h1>
+      <div class="container" style="height: 100px; align-items: flex-start">
+        <div class="item" style="height: 40px">11111</div>
+        <div class="item" style="height: 50px">11111</div>
+        <div class="item" style="height: 80px">11111</div>
+        <div class="item" style="height: 40px;">11111</div>
+        <div class="item" style="height: 30px">11111</div>
+        <div class="item" style="height: 90px">11111</div>
+      </div>
+    </div>
+    <div style="margin: 0 10px">
+      <h1>flex-end</h1>
+      <div class="container" style="height: 100px; align-items: flex-end">
+        <div class="item" style="height: 40px">11111</div>
+        <div class="item" style="height: 50px">11111</div>
+        <div class="item" style="height: 80px">11111</div>
+        <div class="item" style="height: 40px;">11111</div>
+        <div class="item" style="height: 30px">11111</div>
+        <div class="item" style="height: 90px">11111</div>
+      </div>
+    </div>
+    <div style="margin: 0 10px">
+      <h1>center</h1>
+      <div class="container" style="height: 100px; align-items: center">
+        <div class="item" style="height: 40px">11111</div>
+        <div class="item" style="height: 50px">11111</div>
+        <div class="item" style="height: 80px">11111</div>
+        <div class="item" style="height: 40px;">11111</div>
+        <div class="item" style="height: 30px">11111</div>
+        <div class="item" style="height: 90px">11111</div>
+      </div>
+    </div>
+    <div style="margin: 0 10px">
+      <h1>baseline</h1>
+      <div class="container" style="height: 100px; align-items: baseline">
+        <div class="item" style="height: 40px">11111</div>
+        <div class="item" style="height: 50px">11111</div>
+        <div class="item" style="height: 80px">11111</div>
+        <div class="item" style="height: 40px;">11111</div>
+        <div class="item" style="height: 30px">11111</div>
+        <div class="item" style="height: 90px">11111</div>
+      </div>
+    </div>
+    <div style="margin: 0 10px">
+      <h1>stretch</h1>
+      <div class="container" style="height: 100px; align-items: stretch">
+        <div class="item">11111</div>
+        <div class="item">11111</div>
+        <div class="item">11111</div>
+        <div class="item">11111</div>
+        <div class="item">11111</div>
+        <div class="item">11111</div>
+      </div>
+    </div>
+  </div>
   <h2>flex-flow属性是flex-direction属性和flex-wrap属性的简写形式</h2>
   <h1>默认值为row nowrap。</h1>
   <vue-markdown v-highlight>{{msg5}}</vue-markdown>
@@ -73,7 +181,7 @@
     <li>space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。</li>
     <li>stretch（默认值）：轴线占满整个交叉轴。</li>
   </ul>
-  <img :src="alignContent" width="2000" height="1000">
+  <img :src="alignContent" width="2000"  height="1000">
   <div style="height:400px"></div>
 </div>
 </template>
@@ -121,13 +229,13 @@ export default {
 <style scoped>
 .item {
   border: 1px dashed;
+  background: cyan;
 }
 .container {
+  width: 500px;
   display: flex;
   border: 1px dashed red;
   background: yellow;
-  width: 100%;
-  justify-content: space-evenly;
 }
 img {
   max-width: 70%;
