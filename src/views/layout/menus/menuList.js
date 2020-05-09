@@ -62,6 +62,13 @@ module.exports = function () {
       name: "css属性Margin",
       path: 'Margin',
       subMenus: []
+    }, {
+      flag: true,
+      icon: 'el-icon-fa fa-spinner fa-spin',
+      key: 'MinWidth',
+      name: "MinWidth",
+      path: 'MinWidth',
+      subMenus: []
     }]
   }];
 };

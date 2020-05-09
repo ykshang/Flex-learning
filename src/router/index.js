@@ -9,6 +9,7 @@ import Other from "@/views/other/Other.vue";
 import Direction from "@/views/other/Direction.vue";
 import Margin from "@/views/other/Margin.vue";
 import Content from "@/views/other/Content.vue";
+import MinWidth from "@/views/other/Min-width.vue";
 import Container from "@/views/container/Container.vue";
 import Item from "@/views/item/Item.vue";
 
@@ -57,6 +58,10 @@ const routesMap = [
         name: 'Margin',
         path: 'Margin',
         component: Margin
+      }, {
+        name: 'MinWidth',
+        path: 'MinWidth',
+        component: MinWidth
       }]
     }]
   }
