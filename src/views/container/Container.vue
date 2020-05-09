@@ -37,7 +37,7 @@
     <li>center： 居中</li>
     <li>space-between：两端对齐，项目之间的间隔都相等。</li>
     <li>space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。</li>
-    <li>space-evenly：在主轴上平均分配（不是所有的浏览器都支持）</li>
+    <li>space-evenly：在主轴上平均分配</li>
   </ul>
   <h1>space-evenly</h1>
   <div class="container">
