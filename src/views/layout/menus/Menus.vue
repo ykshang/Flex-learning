@@ -27,12 +27,6 @@
   </el-menu>
 </div>
 </template>
-<style>
-  .el-menu-vertical-demo:not(.el-menu--collapse) {
-    width: 200px;
-    min-height: 400px;
-  }
-</style>
 
 <script>
 import Vue from 'vue';
@@ -76,5 +70,9 @@ export default {
   color: #303133;
   transition: .3s;
   -webkit-transition: .3s;
+}
+.el-menu-vertical-demo:not(.el-menu--collapse) {
+  width: 300px;
+  min-height: 400px;
 }
 </style>
