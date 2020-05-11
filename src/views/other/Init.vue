@@ -11,6 +11,22 @@
     <li>flex-wrap 属性为 nowrap。</li>
   </ul>
   <p>这会让你的元素呈线形排列，并且把自己的大小作为在主轴上的大小。如果有太多元素超出容器，它们会溢出而不会换行。元素会沿交叉轴被拉伸来填满它的大小。</p>
+  <el-divider></el-divider>
+  <div class="container">
+    <div class="item">111111111111111111111111111111111111</div>
+    <div class="item">111111111111111111111111111111111</div>
+    <div class="item">11111111111111111111111111111</div>
+    <div class="item">11111111111111111111111111</div>
+    <div class="item">111111111111111111111</div>
+  </div>
+  <el-divider></el-divider>
+    <div class="container">
+    <div class="item">111111111111111111111111111111111111</div>
+    <div class="item">11111111111111111 111111111111111111111111111111111</div>
+    <div class="item">11111111111111111111111111111</div>
+    <div class="item">11111111111111111111111111</div>
+    <div class="item">111111111111111111111</div>
+  </div>
 </div>
 </template>
 
@@ -27,3 +43,15 @@ export default {
   }
 };
 </script>
+<style scoped>
+.item {
+  border: 1px dashed;
+  height: 150px;
+}
+.container {
+  display: flex;
+  border: 1px dashed red;
+  background: yellow;
+  width: 1200px;
+}
+</style>
