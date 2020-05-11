@@ -32,7 +32,7 @@ module.exports = function () {
     flag: true,
     icon: 'el-icon-fa fa-bars',
     key: 'Other',
-    name: "其他",
+    name: "影响flex布局的一些因素",
     path: 'Other',
     subMenus: [{
       flag: true,
@@ -69,13 +69,13 @@ module.exports = function () {
       name: "css属性min-width",
       path: 'MinWidth',
       subMenus: []
-    }, {
-      flag: true,
-      icon: 'el-icon-fa fa-file-powerpoint-o',
-      key: 'Demo',
-      name: "一个具体的应用例子",
-      path: 'Demo',
-      subMenus: []
     }]
+  }, {
+    flag: true,
+    icon: 'el-icon-fa fa-file-powerpoint-o',
+    key: 'Demo',
+    name: "一个具体的应用例子",
+    path: 'Demo',
+    subMenus: []
   }];
 };

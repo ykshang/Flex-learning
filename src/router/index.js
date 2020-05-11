@@ -10,7 +10,7 @@ import Direction from "@/views/other/Direction.vue";
 import Margin from "@/views/other/Margin.vue";
 import Content from "@/views/other/Content.vue";
 import MinWidth from "@/views/other/Min-width.vue";
-import Demo from "@/views/other/Demo.vue";
+import Demo from "@/views/Demo/Demo.vue";
 import Container from "@/views/container/Container.vue";
 import Item from "@/views/item/Item.vue";
 
