@@ -108,7 +108,7 @@
     <li>flex-end：交叉轴的终点对齐。</li>
     <li>center：交叉轴的中点对齐。</li>
     <li>baseline: 项目的第一行文字的基线对齐。</li>
-    <li>stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。</li>
+    <li>stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。设置了高度的元素，不生效</li>
   </ul>
   <div style="display: flex; flex-wrap: wrap;">
     <div style="margin: 0 10px">
@@ -163,7 +163,7 @@
         <div class="item">11111</div>
         <div class="item">11111</div>
         <div class="item">11111</div>
-        <div class="item">11111</div>
+        <div class="item" style="height: 60px">11111</div>
       </div>
     </div>
   </div>
