@@ -43,31 +43,38 @@ module.exports = function () {
       subMenus: []
     }, {
       flag: true,
-      icon: 'el-icon-fa fa-spinner fa-spin',
+      icon: 'el-icon-fa fa-arrows-alt',
       key: 'Content',
-      name: "css属性min-content",
+      name: "css属性min/max-content",
       path: 'Content',
       subMenus: []
     }, {
       flag: true,
-      icon: 'el-icon-fa fa-spinner fa-spin',
+      icon: 'el-icon-fa fa-arrows',
       key: 'Direction',
       name: "css属性direction",
       path: 'Direction',
       subMenus: []
     }, {
       flag: true,
-      icon: 'el-icon-fa fa-spinner fa-spin',
+      icon: 'el-icon-fa fa-object-group',
       key: 'Margin',
       name: "css属性Margin",
       path: 'Margin',
       subMenus: []
     }, {
       flag: true,
-      icon: 'el-icon-fa fa-spinner fa-spin',
+      icon: 'el-icon-fa fa-arrows-h',
       key: 'MinWidth',
-      name: "MinWidth",
+      name: "css属性min-width",
       path: 'MinWidth',
+      subMenus: []
+    }, {
+      flag: true,
+      icon: 'el-icon-fa fa-file-powerpoint-o',
+      key: 'Demo',
+      name: "一个具体的应用例子",
+      path: 'Demo',
       subMenus: []
     }]
   }];
