@@ -83,6 +83,7 @@ export default {
 .column_icon {
   display: none;
 }
+/* .tableCss >>> .el-table--enable-row-hover .el-table__body tr td:hover .column_icon { */
 .tableCss >>> .el-table--enable-row-hover .el-table__body tr:hover>td .column_icon {
   display: inline-flex;
   align-items: center;
