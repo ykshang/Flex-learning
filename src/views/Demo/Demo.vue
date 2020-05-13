@@ -22,7 +22,8 @@
       <el-table-column prop="des" label="描述">
       </el-table-column>
     </el-table>
-    <el-divider></el-divider>
+    <!------------------------------------------------------------------------------------>
+    <el-divider>一条木有感情的分割线</el-divider>
     <p>div默认情况下会独占一行：</p>
     <div style="border: 1px dashed">ddd</div>
   </div>
