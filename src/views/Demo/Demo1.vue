@@ -81,6 +81,7 @@ export default {
         }.bind(this)
       }, {
         icon: "fa fa-info-circle fa-lg",
+        enabled: true,
         handler: function (row) {
           this.$message.warning("更多");
         }.bind(this)

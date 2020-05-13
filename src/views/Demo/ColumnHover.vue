@@ -42,7 +42,7 @@ export default {
       this.icons = [];
       this.iconList.forEach(item => {
         if (item.icon && Object.prototype.toString.call(item.handler) === "[object Function]") {
-          if (!item.enabled || (item.enabled && Object.prototype.toString.call(item.enabled) === "[object Function]" && item.enabled(this.row) === true)) {
+          if (item.enabled === undefined || item.enabled === true || (Object.prototype.toString.call(item.enabled) === "[object Function]" && item.enabled(this.row) === true)) {
             this.icons.push({
               icon: item.icon,
               handler: item.handler

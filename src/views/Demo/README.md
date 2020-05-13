@@ -12,7 +12,7 @@
 
 - row：必传，在组件内部注入到给各个传入的函数（clickContent和iconList），作为函数的参数。
 
-- iconList：非必传，类型为数组，传入对象的字段包括icon、enabled和handler ，icon为按钮组的图标，handler为点击按钮时触发的函数，函数的默认入参为所在表格数据行的scope.row，enabled函数必须返回一个布尔值，判断所在行数据支不支持该图标按钮的展示，enabled可以不传，这时候图标默认展示。
+- iconList：非必传，类型为数组，传入对象的字段包括icon、enabled和handler ，icon为按钮组的图标，handler为点击按钮时触发的函数，函数的默认入参为所在表格数据行的scope.row，enabled可以为布尔值，也可以为函数，如果是函数必须返回一个布尔值，判断所在行数据支不支持该图标按钮的展示，enabled可以不传，这时候图标默认展示。
 
 ## 使用示例
 
