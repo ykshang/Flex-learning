@@ -171,7 +171,7 @@
   <h2>flex-flow属性是flex-direction属性和flex-wrap属性的简写形式</h2>
   <h1>默认值为row nowrap。</h1>
   <vue-markdown v-highlight>{{msg5}}</vue-markdown>
-  <h2>align-content</h2>
+  <h2>align-content属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。</h2>
   <h1>可选值：</h1>
   <vue-markdown v-highlight>{{msg6}}</vue-markdown>
   <ul>
