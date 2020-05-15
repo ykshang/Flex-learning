@@ -9,7 +9,7 @@
             :type="typeRender(scope.row.type)"
             :content="scope.row.name"
             :row="scope.row"
-            :clickContent="clickName"
+            @clickContent="clickName"
             :icon="iconRender(scope.row.type)"
             :iconStyle="iconStyleRender(scope.row.type)"
             :iconList="iconList">
@@ -66,7 +66,7 @@ export default {
       iconList: [{
         icon: "fa fa-heart-o fa-lg",
         enabled: function (row) {
-          return row.type === "file";
+          return row.type !== "file";
         },
         handler: function (row) {
           this.$message.info("收藏成功");
@@ -74,7 +74,7 @@ export default {
       }, {
         icon: "fa fa-share-alt fa-lg",
         enabled: function (row) {
-          return row.status !== "不可用";
+          return row.status === "可用";
         },
         handler: function (row) {
           this.$message.error("分享成功");
@@ -92,7 +92,8 @@ export default {
   },
   methods: {
     clickName (value) {
-      this.$message.info("click name");
+      console.log(value);
+      this.$message.info(value.name);
     },
     typeRender (value) {
       if (value === "file") {

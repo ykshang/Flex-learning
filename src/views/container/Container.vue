@@ -101,6 +101,7 @@
       </div>
     </div>
   </div>
+  <h2>align-items:属性定义了项目在交叉轴上的对齐方式</h2>
   <h1>可选值：</h1>
   <vue-markdown v-highlight>{{msg4}}</vue-markdown>
   <ul>

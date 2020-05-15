@@ -84,5 +84,12 @@ module.exports = function () {
     name: "表格hover组件",
     path: 'Demo1',
     subMenus: []
+  // }, {
+  //   flag: true,
+  //   icon: 'el-icon-fa fa-file-powerpoint-o',
+  //   key: 'Demo2',
+  //   name: "案例步骤条",
+  //   path: 'Demo2',
+  //   subMenus: []
   }];
 };

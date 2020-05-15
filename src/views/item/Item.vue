@@ -19,6 +19,8 @@
     <div class="item flex1" style="order: 1">1</div>
     <div class="item flex1" style="order: 2">2</div>
     <div class="item flex1" style="order: 3">3</div>
+    <div class="item flex1" style="order: 0">0</div>
+    <div class="item flex1" >无</div>
     <div class="item flex1" style="order: 1">1</div>
   </div>
   <h2>flex-grow属性定义项目在主轴上的的放大比例，默认为0，即如果存在剩余空间，也不放大。</h2>

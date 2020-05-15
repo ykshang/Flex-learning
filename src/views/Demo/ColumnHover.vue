@@ -2,7 +2,7 @@
   <div class="column">
     <div class="column_content">
       <i :class="icon" v-if="!!icon" :style="'margin-right: 5px; font-size: 1.3em;'+ iconStyle"></i>
-      <div :class="contentStyle" :title="content" @click="clickFun(row)">{{content}}</div>
+      <div :class="contentStyle" :title="content" @click="clickFun">{{content}}</div>
     </div>
     <div class="column_icon" v-if="showIconListFlag">
       <i v-for="(item, index) in icons" :key="index" :class="item.icon" @click="item.handler(row)"></i>
@@ -13,24 +13,20 @@
 <script>
 export default {
   name: 'ColumnHover',
-  props: ["icon", "type", "clickContent", "iconStyle", "row", "content", "iconList"],
+  props: ["icon", "type", "iconStyle", "row", "content", "iconList"],
   data () {
     return {
       contentStyle: "",
-      clickFun: "",
       showIconListFlag: false,
       icons: []
     };
   },
   mounted () {
-    this.clickFun = function () {};
+    let self = this;
     if (this.type === "text") {
       this.contentStyle = "content";
     } else {
       this.contentStyle = "content el-button--text";
-      if (Object.prototype.toString.call(this.clickContent) === "[object Function]") {
-        this.clickFun = this.clickContent;
-      }
     }
     this.init();
     if (!this.row) {
@@ -54,6 +50,13 @@ export default {
         this.showIconListFlag = true;
       } else {
         this.showIconListFlag = false;
+      }
+    },
+    clickFun () {
+      if (this.type === "text") {
+        return false;
+      } else {
+        this.$emit("clickContent", this.row);
       }
     }
   }

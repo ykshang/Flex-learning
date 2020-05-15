@@ -12,6 +12,7 @@ import Content from "@/views/other/Content.vue";
 import MinWidth from "@/views/other/Min-width.vue";
 import Demo from "@/views/Demo/Demo.vue";
 import Demo1 from "@/views/Demo/Demo1.vue";
+import Demo2 from "@/views/Demo/Demo2.vue";
 import Container from "@/views/container/Container.vue";
 import Item from "@/views/item/Item.vue";
 
@@ -72,6 +73,10 @@ const routesMap = [
         name: 'Demo1',
         path: 'Demo1',
         component: Demo1
+      }, {
+        name: 'Demo2',
+        path: 'Demo2',
+        component: Demo2
       }]
     }]
   }

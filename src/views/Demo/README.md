@@ -20,7 +20,7 @@
 
 ```html
 <template slot-scope="scope">
-  <column-hover type="text" :content="scope.row.name" :row="scope.row" :clickContent="clickContent" icon="fa fa-folder-open"  iconStyle="color: #ffb509" :iconList="iconList">
+  <column-hover type="text" :content="scope.row.name" :row="scope.row" @clickContent="clickContent" icon="fa fa-folder-open"  iconStyle="color: #ffb509" :iconList="iconList">
   </column-hover>
 </template>
 ```
