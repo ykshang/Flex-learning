@@ -1,10 +1,10 @@
 <template>
 <div class="layout">
-  <h2>flex-direction 可以设置主轴以及元素排列方向</h2>
+  <h2>flex-direction 设置主轴方向和默认的元素排列方向（即起始线和终止线的位置）</h2>
   <h1>可选值：</h1>
   <vue-markdown v-highlight>{{msg1}}</vue-markdown>
   <ul>
-    <li>row（默认值）：主轴为水平方向，起点在左端。css属性  direction: rtl会影响对齐方式</li>
+    <li>row（默认值）：主轴为水平方向，起点在左端。</li>
     <li>row-reverse：主轴为水平方向，起点在右端。</li>
     <li>column：主轴为垂直方向，起点在上沿。</li>
     <li>column-reverse：主轴为垂直方向，起点在下沿。</li>
@@ -15,16 +15,16 @@
   <h2>flex-wrap 允许换行</h2>
   <h1>可选值：</h1>
   <vue-markdown v-highlight>{{msg2}}</vue-markdown>
-  <p>默认情况下，项目都排在一条线（又称"轴线"）上，起点则在起始线一端。flex-wrap属性定义，如果一条轴线排不下，如何换行。它可能有三个取值：</p>
+  <p>默认情况下，项目都沿着主轴方向排列。flex-wrap属性定义，如果一条轴线排不下，如何换行。它可能有三个取值：</p>
   <ul>
-    <li>nowrap（默认）：不换行，如果超宽，溢出</li>
+    <li>nowrap（默认）：不换行，如果超宽则溢出</li>
     <br/>
     <img :src="nowrap" width="2000" height="1000">
     <br/>
-    <li>wrap：换行，第一行在上方</li>
+    <li>wrap：超宽允许换行，由上往下，由左往右换行</li>
     <br/>
     <img :src="wrap" width="2000" height="1000">
-    <li>wrap-reverse：逆序换行，第一行在下方。</li>
+    <li>wrap-reverse：超宽允许逆序换行，由下往上，由左往右换行</li>
     <br/>
     <img :src="wrapReverse" width="2000" height="1000">
   </ul>
@@ -32,12 +32,12 @@
   <h1>可选值：</h1>
   <vue-markdown v-highlight>{{msg3}}</vue-markdown>
   <ul>
-    <li>flex-start（默认值）：左对齐</li>
-    <li>flex-end：右对齐</li>
+    <li>flex-start（默认值）：起始线对齐（可以当作左对齐理解）</li>
+    <li>flex-end：终止线对齐</li>
     <li>center： 居中</li>
     <li>space-between：两端对齐，项目之间的间隔都相等。</li>
-    <li>space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。</li>
-    <li>space-evenly：在主轴上平均分配</li>
+    <li>space-around：每个弹性子元素两侧分配相等的空间。所以，子元素之间的间隔比项目与边框的间隔大一倍。</li>
+    <li>space-evenly：在主轴上平均分配间隔，等效于所有的子元素设置margin：auto</li>
   </ul>
   <div style="display: flex; flex-wrap: wrap;">
     <div style="margin: 0 10px">
@@ -195,8 +195,6 @@ import flexDirection from "@/assets/img/flex-direction.png";
 import nowrap from "@/assets/img/nowrap.png";
 import wrap from "@/assets/img/wrap.png";
 import wrapReverse from "@/assets/img/wrap-reverse.png";
-import justifyContent from "@/assets/img/justify-content.png";
-import alignItems from "@/assets/img/align-items.png";
 import alignContent from "@/assets/img/align-content.png";
 
 export default {
@@ -213,8 +211,6 @@ export default {
       nowrap,
       wrap,
       wrapReverse,
-      justifyContent,
-      alignItems,
       alignContent
     };
   },
