@@ -1,7 +1,8 @@
 <template>
 <div class="layout">
-  <h1>position为absolute和fixed的元素会导致元素脱离文档流，影响flex布局，不会作为弹性子元素的存在，但是可以设置在容器上进行布局</h1>
-  <h1>position为arelative的元素不会导致元素脱离文档流，但也影响flex布局</h1>
+  <h2>position</h2>
+  <p>position为absolute和fixed的元素会导致元素脱离文档流，影响flex布局，不会作为弹性子元素的存在，但是可以设置在容器上进行布局</p>
+  <p>position为arelative的元素不会导致元素脱离文档流，但也影响flex布局</p>
   <vue-markdown v-highlight>{{msg1}}</vue-markdown>
   <div class="container flex" style="position: absolute">
     <div class="item">11111111111111111111111 11111111111111111111</div>
