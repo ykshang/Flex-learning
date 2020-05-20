@@ -10,6 +10,7 @@ import Direction from "@/views/other/Direction.vue";
 import Margin from "@/views/other/Margin.vue";
 import Content from "@/views/other/Content.vue";
 import MinWidth from "@/views/other/Min-width.vue";
+import Position from "@/views/other/Position.vue";
 import Demo from "@/views/Demo/Demo.vue";
 import Demo1 from "@/views/Demo/Demo1.vue";
 import Demo2 from "@/views/Demo/Demo2.vue";
@@ -65,6 +66,10 @@ const routesMap = [
         name: 'MinWidth',
         path: 'MinWidth',
         component: MinWidth
+      }, {
+        name: 'Position',
+        path: 'Position',
+        component: Position
       }, {
         name: 'Demo',
         path: 'Demo',

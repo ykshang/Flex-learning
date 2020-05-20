@@ -50,6 +50,13 @@ module.exports = function () {
       subMenus: []
     }, {
       flag: true,
+      icon: 'el-icon-fa fa-arrows-alt',
+      key: 'Position',
+      name: "css属性position",
+      path: 'Position',
+      subMenus: []
+    }, {
+      flag: true,
       icon: 'el-icon-fa fa-arrows',
       key: 'Direction',
       name: "css属性direction",
