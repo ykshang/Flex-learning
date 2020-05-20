@@ -24,7 +24,7 @@
     <div class="item flex1" style="order: 1">1</div>
   </div>
   <h2>flex-grow属性定义项目在主轴上的的放大比例，默认为0，即如果存在剩余空间，也不放大。</h2>
-  <p>flex-grow 若被赋值为一个正整数， flex 元素会以 flex-basis 为基础，沿主轴方向增长尺寸。这会使该元素延展，并占据此方向轴上的可用空间（available space）。如果有其他元素也被允许延展，那么他们会各自占据可用空间的一部分。如果我们给上例中的所有元素设定 flex-grow 值为1， 容器中的可用空间会被这些元素平分。它们会延展以填满容器主轴方向上的空间。flex-grow 属性可以按比例分配剩余空间。在分配空间的时候，如果第一个元素 flex-grow 值为2， 其他元素值为1，则第一个元素将占有2/4（上例中，即为 200px 中的 100px）, 另外两个元素各占有1/4（各50px）。</p>
+  <p>flex-grow 若被赋值为一个正整数， flex 元素会以 flex-basis 为基础，沿主轴方向增长尺寸。这会使该元素延展，并占据此方向轴上的可用空间（available space，即正向自由空间）。如果有多个元素被允许延展，那么他们会按照flex-grow的值为比例分配剩余的可空间（正向自由空间），以填满容器主轴方向上的空间。</p>
   <vue-markdown v-highlight>{{msg2}}</vue-markdown>
   <div class="container" style="height: 50px">
     <div class="item">11111</div>
@@ -34,7 +34,7 @@
     <div class="item" style="flex-grow: 3">11111</div>
   </div>
   <h2>flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。</h2>
-  <p>flex-grow属性是处理flex元素在主轴上增加空间的问题，相反flex-shrink属性是处理flex元素收缩的问题。如果我们的容器中没有足够排列flex元素的空间，那么可以把flex元素flex-shrink属性设置为正整数来缩小它所占空间到flex-basis以下。与flex-grow属性一样，可以赋予不同的值来控制flex元素收缩的程度 —— 给flex-shrink属性赋予更大的数值可以比赋予小数值的同级元素收缩程度更大。在计算flex元素收缩的大小时，它的最小尺寸也会被考虑进去，就是说实际上flex-shrink属性可能会和flex-grow属性表现的不一致。</p>
+  <p>flex-grow属性是处理flex元素在主轴上增加空间的问题，相反flex-shrink属性是处理flex元素收缩的问题。如果容器中空间不足以容纳全部的子元素，可以通过设置flex-shrink属性设置为正整数来缩小它所占的空间。与flex-grow属性一样，可以赋予不同的值来控制flex元素收缩的程度，其数值代表了收缩的比例。在计算flex元素收缩的大小时，它的最小尺寸（<b>min-content</b>）也会被考虑进去，就是说实际上flex-shrink属性可能会和flex-grow属性表现的不一致。</p>
   <vue-markdown v-highlight>{{msg3}}</vue-markdown>
   <div class="container" style="height: 50px">
     <div class="item" style="flex-shrink: 0; width: 300px">11111</div>
@@ -43,8 +43,8 @@
     <div class="item" style="flex-shrink: 2; width: 300px">11111</div>
     <div class="item" style="flex-shrink: 3; width: 300px">11111</div>
   </div>
-  <h2>flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。</h2>
-  <p>浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。如果元素设置主轴方向的宽度，那么flex-basis会默认使用这个值，它可以设为跟width或height属性一样的值（比如350px），则项目将占据固定空间。flex-basis 属性在任何空间分配发生之前初始化flex子元素的尺寸. 此属性的初始值为 auto. 如果 flex-basis 设置为 auto , 浏览器会先检查flex子元素的主尺寸是否设置了绝对值再计算出flex子元素的初始值. 比如说你已经给你的flex子元素设置了200px 的宽，则200px 就是这个flex子元素的 flex-basis.</p>
+  <h2>flex-basis属性定义了在分配空间之前，项目占据的主轴空间（main size）。</h2>
+  <p>浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。如果元素设置主轴方向的宽度（<b>width</b>或者<b>height</b>），那么flex-basis会默认使用这个值，它可以设为具体的值（比如350px），则项目将占据固定空间。flex-basis 属性在任何空间分配发生之前初始化flex子元素的尺寸. 此属性的初始值为 auto. 如果 flex-basis 设置为 auto , 浏览器会先检查flex子元素的主尺寸是否设置了绝对值再计算出flex子元素的初始值. 比如说你已经给你的flex子元素设置了200px 的宽，则200px 就是这个flex子元素的 flex-basis.</p>
   <vue-markdown v-highlight>{{msg4}}</vue-markdown>
   <div class="container" style="height: 50px">
     <div class="item">11111</div>
