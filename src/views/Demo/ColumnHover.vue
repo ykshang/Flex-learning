@@ -4,7 +4,7 @@
       <i :class="icon" v-if="!!icon" :style="'margin-right: 5px; font-size: 1.3em;'+ iconStyle"></i>
       <div :class="contentStyle" :title="content" @click="clickFun">{{content}}</div>
     </div>
-    <div class="column_icon" v-if="showIconListFlag">
+    <div :class="showMode + ' column_icon'" v-if="showIconListFlag">
       <i v-for="(item, index) in icons" :key="index" :class="item.icon" @click="item.handler(row)"></i>
     </div>
   </div>
@@ -13,12 +13,13 @@
 <script>
 export default {
   name: 'ColumnHover',
-  props: ["icon", "type", "iconStyle", "row", "content", "iconList"],
+  props: ["icon", "type", "iconStyle", "row", "content", "iconList", "mode"],
   data () {
     return {
       contentStyle: "",
       showIconListFlag: false,
-      icons: []
+      icons: [],
+      showMode: ""
     };
   },
   mounted () {
@@ -28,6 +29,10 @@ export default {
     } else {
       this.contentStyle = "content el-button--text";
     }
+    if (this.mode !== "column") {
+      this.mode = "row";
+    }
+    this.showMode = this.mode;
     this.init();
     if (!this.row) {
       throw new Error("The prop 'row' is Required");

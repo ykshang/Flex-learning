@@ -7,6 +7,7 @@
         <template slot-scope="scope">
           <column-hover
             :type="typeRender(scope.row.type)"
+            mode="row"
             :content="scope.row.name"
             :row="scope.row"
             @clickContent="clickName"
@@ -127,7 +128,7 @@ export default {
   margin: 30px;
 }
 /* .tableCss >>> .el-table--enable-row-hover .el-table__body tr td:hover .column_icon { */
-div >>> .el-table--enable-row-hover .el-table__body tr:hover>td .column_icon {
+/* div >>> .el-table--enable-row-hover .el-table__body tr:hover>td .column_icon {
   display: inline-flex;
-}
+} */
 </style>

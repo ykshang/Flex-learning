@@ -1,4 +1,9 @@
 .el-menu {
   border-right: solid 1px #ffffff;
 }
-
+.el-table--enable-row-hover .el-table__body tr:hover>td .row .column_icon {
+  display: inline-flex;
+}
+.el-table--enable-row-hover .el-table__body tr td:hover .column .column_icon{
+  display: inline-flex;
+}

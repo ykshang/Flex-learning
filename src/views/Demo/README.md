@@ -4,6 +4,8 @@
 
 - content：必传，为单元格的内容部分。
 
+- mode: 模式，即按行（row）触发还是，按照单元格（column）触发，默认值为row
+
 - clickContent：当type值不为‘text’时必传，默认入参为所在表格数据行scope.row，为点击单元格内容content部分触发的事件对应的函数。当type为text的时候，不生效。
 
 - icon：非必传，单元格左端的图标。已初始化的样式为margin-right：5px，font-size：1.5em，可通过iconStyle覆盖。
@@ -54,5 +56,3 @@ clickContent (value) {
   console.log(value); // 打印结果为所在行表格数据scope.row的值
 }
 ```
-
-
