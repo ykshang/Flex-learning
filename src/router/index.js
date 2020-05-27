@@ -21,6 +21,7 @@ const routesMap = [
   {
     name: 'Index',
     path: '/',
+    redirect: "Overview", // 设置默认默认展示的路由
     component: Index,
     children: [{
       name: 'Overview',
