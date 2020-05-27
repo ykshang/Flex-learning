@@ -31,6 +31,8 @@ const i18n = new VueI18n({
   // this.$i18n.locale, 通过切换locale的值来实现语言切换
   messages: i18nList
 });
+
+// vue里的代码高亮组件
 Vue.use(VueHighlightJS);
 Vue.directive('highlight', (el) => {
   let blocks = el.querySelectorAll('pre code');
