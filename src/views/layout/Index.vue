@@ -37,7 +37,6 @@ export default {
   },
   methods: {
     menuChanged (name, path) {
-      console.log(path);
       this.$router.push({
         name: name,
         path: path
