@@ -73,7 +73,7 @@ module.exports = function () {
       flag: true,
       icon: 'el-icon-fa fa-arrows-h',
       key: 'MinWidth',
-      name: "css属性min-width",
+      name: "css属性min-width/overflow",
       path: 'MinWidth',
       subMenus: []
     }]

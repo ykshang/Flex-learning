@@ -215,6 +215,7 @@ export default {
     };
   },
   mounted () {
+    console.log(this.$msg);
   },
   methods: {
   },

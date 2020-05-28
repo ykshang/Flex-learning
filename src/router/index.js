@@ -26,7 +26,7 @@ const routesMap = [
     children: [{
       name: 'Overview',
       path: 'Overview',
-      component: Overview,
+      component: () => import('@/views/overview/Overview.vue'),
       children: []
     }, {
       name: 'Introduction',

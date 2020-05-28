@@ -20,7 +20,7 @@ Vue.use(VueI18n);// 应用VueI18n组件
 
 Vue.config.productionTip = false;
 
-// 加载自定义的全部变量到Vue下
+// 把自定义的全局变量挂载到Vue下
 Object.keys(vueGlobal).forEach(key => {
   Vue.prototype['$' + key] = vueGlobal[key];
 });
@@ -46,6 +46,7 @@ new Vue({
   el: '#app',
   i18n,
   router,
+  Vue,
   components: { App },
   template: '<App/>'
 });

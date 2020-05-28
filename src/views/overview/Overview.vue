@@ -51,6 +51,7 @@ export default {
     };
   },
   mounted () {
+    this.$msg = "11";
     this.flg = false;
     this.cssContent = [{
       name: "容器",
