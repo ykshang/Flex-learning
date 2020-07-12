@@ -5,8 +5,8 @@
 ## Build Setup
 
 ``` bash
-# 安装依赖包 install dependencies
-npm install
+# 将目录下的node_modules.tar解压到当前目录下，不需要单独在安装依赖
+
 
 # 启动服务 serve with hot reload at localhost:4444
 npm run dev
