@@ -9,6 +9,7 @@
   <el-button type="primary" @click="changeDiv">{{"当前为: " + isDiv + ""}}</el-button>
   <br/>
   <br/>
+  
   <div v-if="isDiv ==='div'" :class="'container' + flexFlag">
     <div class="item">弹性元素1</div>
     <div class="item">弹性元素2</div>
